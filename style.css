@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  object-fit: cover;
+}
+
+h1 {
+  text-align: center;
+  padding: 35px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+}
+
+.container-jogo {
+  width: 100%;
+  display: flex;
+  margin-inline: auto;
+}
+
+.jogo {
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 50%;
+  cursor: pointer;
+  margin-inline: auto;
+}
+
+.carta img{
+  width: 120px;
+  height: 100%;
+}
+.grid {
+  grid-template-columns: repeat(6, 1fr);
+  position: relative;
+  display: grid;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-inline: auto;
+}
+
+.virada {
+  transform: rotateY(180deg);
+}
+
+.frente {
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  z-index: 1; /* valor menor do que os outros cards */
+  }
+
+.verso {
+  background-size: cover;
+ 
+}
